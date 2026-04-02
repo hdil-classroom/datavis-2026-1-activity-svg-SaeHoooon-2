@@ -12,25 +12,155 @@
 		}
 
 		#visualization-activity {
-			width: 600px;
-			height: 500px;
+			width: 700px;
+			height: 520px;
 		}
 
-		/* YOUR CSS CODE WILL GO HERE */
+		#chart-title {
+			font-size: 20px;
+			font-weight: bold;
+		}
 
+		.axis {
+			stroke: black;
+			stroke-width: 2;
+		}
 
+		.bar-line2 {
+			fill: #014f1abd;
+		}
+
+		.bar-line3 {
+			fill: #E67E22;
+		}
+
+		.bar-line1 {
+			fill: #2756ae;
+		}
+
+		.station-label {
+			font-size: 12px;
+			text-anchor: middle;
+		}
+
+		.value-label {
+			font-size: 11px;
+			text-anchor: middle;
+		}
+
+		.axis-label {
+			font-size: 14px;
+		}
+
+		.grid-line {
+			stroke: #cccccc;
+			stroke-width: 1;
+			stroke-dasharray: 4 3;
+		}
+
+		.tick-label {
+			font-size: 11px;
+			text-anchor: end;
+			fill: #555555;
+		}
 	</style>
 </head>
 
 <body>
 	<h1 id="header-title">
-		In-Class Acitivity by REPLACE_WITH_YOUR_NAME
+		In-Class Activity by SaeHoon Ahn
 	</h1>
 
-	<svg id="visualization-activity">
-		<!-- YOUR SVG CODE WILL GO HERE -->
+	<svg id="visualization-activity" viewBox="0 0 700 520">
+		<text id="chart-title" x="300" y="40" text-anchor="middle">
+			Top 6 Busiest Stations on Dec 1, 2024
+		</text>
 
+		<g id="axes">
+			<line class="axis" x1="70" y1="420" x2="560" y2="420"></line>
+			<line class="axis" x1="70" y1="80" x2="70" y2="420"></line>
+			<text class="axis-label" x="20" y="250" transform="rotate(-90 20 250)">
+				Passengers
+			</text>
+			<text class="axis-label" x="315" y="515" text-anchor="middle">
+				Station
+			</text>
+		</g>
 
+		<g id="grid">
+			<line class="grid-line" x1="70" y1="420" x2="560" y2="420"></line>
+			<text class="tick-label" x="64" y="424">0</text>
+			<line x1="65" y1="420" x2="70" y2="420" stroke="black" stroke-width="1.5"></line>
+
+			<line class="grid-line" x1="70" y1="375" x2="560" y2="375"></line>
+			<text class="tick-label" x="64" y="379">10,000</text>
+			<line x1="65" y1="375" x2="70" y2="375" stroke="black" stroke-width="1.5"></line>
+
+			<line class="grid-line" x1="70" y1="329" x2="560" y2="329"></line>
+			<text class="tick-label" x="64" y="333">20,000</text>
+			<line x1="65" y1="329" x2="70" y2="329" stroke="black" stroke-width="1.5"></line>
+
+			<line class="grid-line" x1="70" y1="284" x2="560" y2="284"></line>
+			<text class="tick-label" x="64" y="288">30,000</text>
+			<line x1="65" y1="284" x2="70" y2="284" stroke="black" stroke-width="1.5"></line>
+
+			<line class="grid-line" x1="70" y1="239" x2="560" y2="239"></line>
+			<text class="tick-label" x="64" y="243">40,000</text>
+			<line x1="65" y1="239" x2="70" y2="239" stroke="black" stroke-width="1.5"></line>
+
+			<line class="grid-line" x1="70" y1="194" x2="560" y2="194"></line>
+			<text class="tick-label" x="64" y="198">50,000</text>
+			<line x1="65" y1="194" x2="70" y2="194" stroke="black" stroke-width="1.5"></line>
+
+			<line class="grid-line" x1="70" y1="148" x2="560" y2="148"></line>
+			<text class="tick-label" x="64" y="152">60,000</text>
+			<line x1="65" y1="148" x2="70" y2="148" stroke="black" stroke-width="1.5"></line>
+
+			<line class="grid-line" x1="70" y1="103" x2="560" y2="103"></line>
+			<text class="tick-label" x="64" y="107">70,000</text>
+			<line x1="65" y1="103" x2="70" y2="103" stroke="black" stroke-width="1.5"></line>
+		</g>
+
+		<g id="bars">
+			<rect class="bar-line2" x="95" y="90" width="55" height="330"></rect>
+			<text class="value-label" x="122.5" y="80">72,874</text>
+			<text class="station-label" x="122.5" y="440">Hongdae</text>
+
+			<rect class="bar-line2" x="176" y="135" width="55" height="285"></rect>
+			<text class="value-label" x="203.5" y="125">63,085</text>
+			<text class="station-label" x="203.5" y="440">Jamsil</text>
+
+			<rect class="bar-line3" x="257" y="178" width="55" height="242"></rect>
+			<text class="value-label" x="284.5" y="168">53,566</text>
+			<text class="station-label" x="284.5" y="440">Express Bus</text>
+			<text class="station-label" x="284.5" y="455">Terminal</text>
+
+			<rect class="bar-line1" x="338" y="236" width="55" height="184"></rect>
+			<text class="value-label" x="365.5" y="226">40,617</text>
+			<text class="station-label" x="365.5" y="440">Seoul Station</text>
+
+			<rect class="bar-line2" x="419" y="247" width="55" height="173"></rect>
+			<text class="value-label" x="446.5" y="237">38,271</text>
+			<text class="station-label" x="446.5" y="440">Sillim</text>
+
+			<rect class="bar-line2" x="500" y="251" width="55" height="169"></rect>
+			<text class="value-label" x="527.5" y="241">37,521</text>
+			<text class="station-label" x="527.5" y="440">Sindorim</text>
+		</g>
+
+		<g id="legend">
+			<rect x="580" y="130" width="110" height="90" rx="6" ry="6" fill="white" stroke="#cccccc" stroke-width="1"></rect>
+			<text x="635" y="150" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Line</text>
+
+			<rect x="590" y="160" width="14" height="14" fill="#2756ae"></rect>
+			<text x="610" y="172" font-size="12" fill="#333">Line 1</text>
+
+			<rect x="590" y="182" width="14" height="14" fill="#014f1abd"></rect>
+			<text x="610" y="194" font-size="12" fill="#333">Line 2</text>
+
+			<rect x="590" y="204" width="14" height="14" fill="#E67E22"></rect>
+			<text x="610" y="216" font-size="12" fill="#333">Line 3</text>
+		</g>
 	</svg>
 
 </body>
